@@ -26,6 +26,7 @@
     
   },
   "devDependencies": {
-    
+    "gulp": "gulpjs/gulp#4.0",
+    "steamer-cli": "^0.0.1"
   }
 }
