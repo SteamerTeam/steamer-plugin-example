@@ -1,7 +1,7 @@
 {
   "name": "steamer-plugin-example",
   "version": "0.0.4",
-  "description": "steamer",
+  "description": "steamer-plugin-example",
   "main": "index.js",
   "scripts": {
     
