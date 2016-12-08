@@ -1,14 +1,11 @@
 {
   "name": "steamer-plugin-example",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "steamer",
   "main": "index.js",
   "scripts": {
     
   },
-  "files": [
-    "bin"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SteamerTeam/steamer-plugin-example.git"
