@@ -1,7 +1,11 @@
 "use strict";
 
-module.exports = {
-	init: function(argv) {
-		console.log(argv);
-	}
+function ExamplePlugin(argv) {
+	this.argv = argv;
+}
+
+ExamplePlugin.prototype.init = function() {
+	console.log(this.argv);
 };
+
+module.exports = ExamplePlugin;

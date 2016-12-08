@@ -1,6 +1,6 @@
 {
   "name": "steamer-plugin-example",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "steamer",
   "main": "index.js",
   "scripts": {
@@ -24,6 +24,6 @@
   },
   "devDependencies": {
     "gulp": "gulpjs/gulp#4.0",
-    "steamer-cli": "^0.0.1"
+    "steamer-cli": "^*"
   }
 }
