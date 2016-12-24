@@ -32,3 +32,13 @@ module.exports = ExamplePlugin;
 "main": "index.js",
 "bin": "index.js",
 ```
+
+#### Develop
+```
+// link you module to global path, then you can use steamer xxx directly
+npm link
+
+// when you finish testing, please unlink the module
+npm unlink steamer-plugin-xxx
+
+```
