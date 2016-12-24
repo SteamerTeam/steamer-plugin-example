@@ -26,8 +26,9 @@ ExamplePlugin.prototype.init = function() {
 module.exports = ExamplePlugin;
 ```
 
-* Specify a main file in package.json
+* Specify a main file and a bin file in package.json
 
 ```
 "main": "index.js",
+"bin": "index.js",
 ```
