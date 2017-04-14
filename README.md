@@ -1,24 +1,30 @@
 ### steamer-plugin-example
 
-steamer plugin example
+steamer plugin 例子
 
-#### How to write a plugin
+#### 如何写一个 steamerjs 插件
 
-* Create a new function
+* 创建一个函数
 
-An argv option will be passed into the function. Argument detail, please take a look at [yargs](https://github.com/yargs/yargs).
-
+```javascript
+steamer example -c config.js
+// 或
+steamer example --config config.js
 ```
+
+当上述命令启动时，一个命令参数会传入函数中。更多相关参数的文档，请参考 [yargs](https://github.com/yargs/yargs).
+
+```javascript
 function ExamplePlugin(argv) {
 	this.argv = argv;
 }
 ```
 
-* Create `init` function
+* 创建 `init` 函数
 
-Create `init` prototype function for the plugin since this function will be invoked right after the command is typed.
+为插件创建 `init` prototype 函数， 因为命令在启动时会自动调用此函数。
 
-```
+```javascript
 ExamplePlugin.prototype.init = function() {
 	console.log(this.argv);
 };
@@ -28,17 +34,27 @@ module.exports = ExamplePlugin;
 
 * Specify a main file and a bin file in package.json
 
-```
-"main": "index.js",
-"bin": "index.js",
+```javascript
+"main": "index.js"
 ```
 
-#### Develop
+* 创建 `help` 函数
+
+使用下面命令时，会自动调用 `help` 函数，主要用于输出插件帮助文档。
+
 ```
-// link you module to global path, then you can use steamer xxx directly
+steamer example -h
+// 或
+steamer example --help
+```
+
+#### 开发
+
+```javascript
+// 将你的插件传至全局路径，那你就可以直接使用 `steamer example`
 npm link
 
-// when you finish testing, please unlink the module
-npm unlink steamer-plugin-xxx
+// 当你完成开发，可以 `unlink` 你的插件
+npm unlink
 
 ```
