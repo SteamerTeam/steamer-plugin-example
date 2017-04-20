@@ -1,8 +1,8 @@
-### steamer-plugin-example
+# steamer-plugin-example
 
 steamer plugin 例子
 
-#### 如何写一个 steamerjs 插件
+## 如何写一个 steamerjs 插件
 
 * 创建一个函数
 
@@ -48,7 +48,7 @@ steamer example -h
 steamer example --help
 ```
 
-#### 开发
+## 开发
 
 ```javascript
 // 将你的插件传至全局路径，那你就可以直接使用 `steamer example`
