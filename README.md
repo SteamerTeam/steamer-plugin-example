@@ -51,7 +51,7 @@ steamer example --help
 
 ## `Util` 库
 
-开发命令行时，常常需要一些 `Util` 函数，帮助你快速开发，`Steamer` 提供以下 `Util` 库：
+开发插件时，常常需要一些 `Util` 函数，帮助你快速开发，`Steamer` 提供以下 `Util` 库：
 
 * [steamer-pluginutils](https://github.com/SteamerTeam/steamer-pluginutils)
 
