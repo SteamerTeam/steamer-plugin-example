@@ -2,11 +2,7 @@
 
 steamer plugin 例子
 
-## 如何写一个 steamerjs 插件
-
-* 确认是否已安装steamer CLI工具，如果还未安装，请参考https://github.com/steamerjs/steamerjs
-
-* 创建一个函数
+完成这个example plugin之后，可以这样使用这个插件：
 
 ```javascript
 steamer example -c config.js
@@ -14,7 +10,11 @@ steamer example -c config.js
 steamer example --config config.js
 ```
 
-当上述命令启动时，一个命令参数会传入函数中。更多相关参数的文档，请参考 [yargs](https://github.com/yargs/yargs).
+## 如何写一个 steamerjs 插件
+
+* 确认是否已安装steamer CLI工具，如果还未安装，请参考https://github.com/steamerjs/steamerjs
+
+当使用插件的命令启动时，一个命令参数会传入函数中。更多相关参数的文档，请参考 [yargs](https://github.com/yargs/yargs).
 
 ```javascript
 function ExamplePlugin(argv) {
