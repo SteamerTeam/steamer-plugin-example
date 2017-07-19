@@ -4,6 +4,8 @@ steamer plugin 例子
 
 ## 如何写一个 steamerjs 插件
 
+* 确认是否已安装steamer CLI工具，如果还未安装，请参考https://github.com/steamerjs/steamerjs
+
 * 创建一个函数
 
 ```javascript
