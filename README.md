@@ -15,11 +15,24 @@ steamer example --config config.js
 
 ## 如何写一个 steamerjs 插件
 
-* 创建一个函数作为插件
+* 创建一个类，继承 [`steamer-plugin`](https://github.com/SteamerTeam/steamer-plugin)。此插件有许多辅助方法，请此往插件文件进行查询。
 
 ```javascript
-function ExamplePlugin(argv) {
-	this.argv = argv;
+class ExamplePlugin extends SteamerPlugin {
+    constructor(args) {
+        super(args);
+        this.argv = args;
+        this.pluginName = 'steamer-plugin-example';
+        this.description = 'steamer plugin example';
+    }
+
+    init() {
+        
+    }
+
+    help() {
+        
+    }
 }
 ```
 当在终端输入插件命令时，命令的参数将被传入这个函数
@@ -28,41 +41,37 @@ function ExamplePlugin(argv) {
 
 * `init` 函数
 
-为插件创建 `init` prototype 函数， 插件命令在启动时会自动调用此函数。
+为类创建 `init` 方法， 插件命令在启动时会自动调用此函数。
 
 ```javascript
-ExamplePlugin.prototype.init = function() {
-	console.log(this.argv);
-};
+init() {
+        
+}
+```
 
+```javascript
+// 导出此类
 module.exports = ExamplePlugin;
 ```
 
 
 * `help` 函数
 
-为插件创建`help` prototype 函数
+为插件创建 `help` 方法
 
 ```javascript
-ExamplePlugin.prototype.help = function() {
-	console.log("Usage of Example: ");
+help() {
+        
 }
 ```
 
-当使用命令`steamer [plugin name] -h`或者`steamer [plugin name] --help`时，会自动调用 `help` 函数，用于输出插件帮助文档。
+当使用命令 `steamer [plugin name] -h` 或者 `steamer [plugin name] --help` 时，会自动调用 `help` 函数，用于输出插件帮助文档。
 
 * 在package.json中指定入口
 
 ```javascript
 "main": "index.js"
 ```
-
-## `Util` 库
-
-开发插件时，常常需要一些 `Util` 函数，帮助你快速开发，`Steamer` 提供以下 `Util` 库：
-
-* [steamer-pluginutils](https://github.com/SteamerTeam/steamer-pluginutils)
-
 
 ## 插件的使用
 
