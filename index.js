@@ -15,7 +15,7 @@ class ExamplePlugin extends SteamerPlugin {
     }
 
     help() {
-        this.utils.printUsage('steamer plugin example help', 'example');
+        this.printUsage('steamer plugin example help', 'example');
     }
 }
 
