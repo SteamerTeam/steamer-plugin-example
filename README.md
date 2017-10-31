@@ -1,6 +1,26 @@
 # steamer-plugin-example
 
-steamer plugin 例子
+## 开发插件
+
+```javascript
+npm i -g steamerjs
+
+steamer develop --plugin [plugin name xxx]
+// 或
+steamer develop -p [plugin name xxx]
+// 命令运行后，会下载 [steamer-plugin-example](https://github.com/steamerjs/steamer-plugin-example)
+
+cd steamer-plugin-xxx
+
+// 将你的插件链接至全局路径，就可以直接使用 `steamer example`
+npm link
+
+// 当你完成开发，可以 `unlink` 你的插件
+npm unlink
+
+```
+
+## steamer plugin 例子
 
 * 确认是否已安装steamer CLI工具，如果还未安装，请参考https://github.com/steamerjs/steamerjs
 
@@ -71,15 +91,4 @@ help() {
 
 ```javascript
 "main": "index.js"
-```
-
-## 插件的使用
-
-```javascript
-// 将你的插件链接至全局路径，就可以直接使用 `steamer example`
-npm link
-
-// 当你完成开发，可以 `unlink` 你的插件
-npm unlink
-
 ```
